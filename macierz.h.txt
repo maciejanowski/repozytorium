@@ -1,5 +1,5 @@
 #ifndef MACIERZ
-#define MACIERZ
+#define MACIERZ // jaka macierz?
 #include <iostream>
 #include "wektor.h"
 using namespace std;
