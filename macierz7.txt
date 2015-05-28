@@ -1,0 +1,24 @@
+int operator* (macierz & m, wektor & w)
+{
+int wynik = 0;
+if(m.wiersze == w.rozmiar)
+	for(int petla = 0; petla < w.rozmiar; petla++) wynik += m[petla][0]*w[petla];
+else cout << "blad rozmiaru" << endl;
+return wynik;	
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////
+wektor ** powieksz (wektor ***tab, int rozmiar)
+{
+wektor **nowa;
+nowa = new wektor * [rozmiar + 1]; 
+for(int petla = 0; petla < rozmiar; petla++)
+	{
+	nowa[petla] = new wektor;
+	*nowa[petla] = *(*tab)[petla];
+	}
+nowa[rozmiar]=new wektor;
+for(int petla = 0; petla < rozmiar; petla++) delete (*tab)[petla];
+delete [] (*tab);
+return nowa;
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////
