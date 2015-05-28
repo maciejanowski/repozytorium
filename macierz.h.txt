@@ -1,6 +1,6 @@
 #ifndef MACIERZ //bardzo ³adnie
 #define MACIERZ // jaka macierz???
-#include <iostream>
+#include <iostream> //konflikt
 #include "wektor.h"
 using namespace std;
 
