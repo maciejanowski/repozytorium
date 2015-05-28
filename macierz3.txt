@@ -1,0 +1,34 @@
+macierz & macierz::operator= (const macierz & m)
+{
+if (this == &m) return (*this);
+for (int petla = 0; petla < wiersze; petla++) delete [] tablica[petla];
+delete [] tablica;
+
+wiersze = m.wiersze;
+kolumny = m.kolumny;
+tablica = new wektor* [wiersze];
+for (int petla = 0; petla < wiersze; petla++) 
+	{
+	tablica[petla] = new wektor(kolumny);
+	(*tablica[petla]) = (*m.tablica)[petla];	
+	}
+return (*this);	
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////
+wektor & macierz::operator[] (int ktory)
+{
+return *(tablica[ktory]);
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////
+macierz macierz::operator+ (macierz & m)
+{
+macierz wynik;
+wynik = macierz(kolumny, wiersze);
+
+if ((wiersze == m.wiersze) && (kolumny == m.kolumny))
+	{
+	for (int petla = 0; petla < wiersze; petla++) wynik[petla] = (*this)[petla] + m[petla];	
+	}
+else cout << "blad rozmiarow" << endl;
+return wynik;		
+}
