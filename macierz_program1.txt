@@ -1,0 +1,29 @@
+#include <iostream>
+#include "macierz.h"
+#include "wektor.h"
+#include <cstdio>
+#include <conio.h>
+using namespace std;
+
+int main()
+{
+wektor w, wynik;
+macierz m1, m2, wynikowa;
+int liczba, wybor;
+bool rezultat;
+
+system("cls");
+cout << "\tDzialania:" << endl <<
+    "(1)   operacja  + (macierz, macierz)" << endl <<
+    "(2)   operacja += (macierz, macierz)" << endl <<
+    "(3)   oepracja  - (macierz, macierz)" << endl << 
+    "(4)   operacja -= (macierz, macierz)" << endl <<
+    "(5)   operacja  * (macierz, macierz)" << endl <<
+    "(6)   operacja *= (macierz, macierz)" << endl <<
+    "(7)   operacja  *  (macierz, liczba)" << endl <<
+    "(8)   operacja *=  (macierz, liczba)" << endl <<
+    "(9)   operacja == (macierz, macierz)" << endl <<
+    "(10)  operacja != (macierz, macierz)" << endl <<
+    "(11)  operacja  *  (wektor, macierz)" << endl <<
+    "(12)  operacja *=  (wektor, macierz)" << endl <<
+    "(13)  operacja  *  (macierz, wektor)" << endl;
