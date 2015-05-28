@@ -1,0 +1,158 @@
+while(cin  wybor)
+	{
+	switch(wybor)
+    	{      
+      	case 1
+      		cin.get();
+			system(cls);
+			cout  Podaj wspolrzedne [enter], [enter][enter]n;
+			cin  m1;
+			cout    +nn;
+			cin  m2;
+			cout  czy ja zmieniam ten plik  endl;
+			wynikowa = m1 + m2;
+			cout    =nn  wynikowa  nWcisnij [enter] aby kontynuowacn;
+			cin.get();
+      		break;
+      	case 2
+      		cin.get(); 
+			system(cls);
+			cout  Podaj wspolrzedne [enter], [enter][enter]n;
+			cin  m1;
+			cout    +=nn;
+			cin  m2;
+			m1 += m2;
+			cout    =nn  m1  nWcisnij [enter] aby kontynuowacn;
+			cin.get();
+      		break;
+      	case 3
+     		cin.get(); 
+			system(cls);
+			cout  Podaj wspolrzedne [enter], [enter][enter]n;
+			cin  m1;
+			cout    -nn;
+			cin  m2;
+			wynikowa = m1 - m2;
+			cout    =nn  wynikowa  nWcisnij [enter] aby kontynuowacn;
+			cin.get();
+ 			break;
+     	case 4
+      		cin.get(); 
+			system(cls);
+			cout  Podaj wspolrzedne [enter], [enter][enter]n;
+			cin  m1;
+			cout    i=nn;
+			cin  m2;
+			m1 -= m2;
+			cout    =nn  m1  nWcisnij [enter] aby kontynuowacn;
+			cin.get();
+      		break;
+      	case 5
+      		cin.get(); 
+			system(cls);
+			cout  Podaj wspolrzedne [enter], [enter][enter]n;
+			cin  m1;
+			cout    nn;
+			cin  m2;
+			wynikowa = m1  m2;
+			cout    =nn  wynikowa  nWcisnij [enter] aby kontynuowacn;
+			cin.get();
+      		break;
+      	case 6
+      		cin.get(); 
+			system(cls);
+			cout  Podaj wspolrzedne [enter], [enter][enter]n;
+			cin  m1;
+			cout    =nn;
+			cin  m2;
+			m1 = m2;
+			cout    =nn  m1  nWcisnij [enter] aby kontynuowacn;
+			cin.get();
+      		break;
+      	case 7
+      		cin.get(); 
+			system(cls);
+			int liczba;
+			cout  Podaj wspolrzedne [enter], [enter][enter]n;
+			cin  m1;
+			cout    nn;
+			cin  liczba;
+			wynikowa = m1  liczba;
+			cout    =nn  wynikowa  nWcisnij [enter] aby kontynuowacn;
+			cin.get();
+			cin.get();
+			break;
+      	case 8
+			cin.get(); 
+			system(cls);
+			cout  Podaj wspolrzedne [enter], [enter][enter]n;
+			cin  m1;
+			cout    =nn;
+			cin  liczba;
+			m1 = liczba;
+			cout    =nn  m1  nWcisnij [enter] aby kontynuowacn;
+			cin.get();
+			cin.get();
+ 			break;
+      	case 9
+     		cin.get(); 
+			system(cls);
+			cout  Podaj wspolrzedne [enter], [enter][enter]n;
+			cin  m1;
+			cout    ==nn;
+			cin  m2;
+			rezultat = (m1 == m2);
+			cout    =n  rezultat  nWcisnij [enter] aby kontynuowacn;
+			cin.get();
+      		break;
+      	case 10
+      		cin.get(); 
+			system(cls);
+			cout  Podaj wspolrzedne [enter], [enter][enter]n;
+			cin  m1;
+			cout    !=nn;
+			cin  m2;
+			rezultat = (m1 != m2);
+			cout    =n  rezultat  nWcisnij [enter] aby kontynuowacn;
+			cin.get();
+      		break;
+      	case 11
+      		cin.get(); 
+			system(cls);
+			cout  Podaj wspolrzedne wektora, pozniej macierzyn;
+			cin  w;
+			cout    n;
+			cin  m1;
+			wynik = w  m1;
+			cout    =n  wynik  nWcisnij [enter] aby kontynuowacn;
+			cin.get();
+    		break;
+      	case 12
+      		cin.get(); 
+			system(cls);
+			cout  Podaj wspolrzedne wektora, pozniej macierzyn;
+			cin  w;
+			cout    n;
+			cin  m1;
+			w = m1;
+			cout    =n  w  nWcisnij [enter] aby kontynuowacn;
+			cin.get();
+      		break;
+      	case 13
+      		int wynik;
+			cin.get(); 
+			system(cls);
+			cout  Podaj wspolrzedne macierzy, pozniej wektoran;
+			cin  m1;
+			cout    nn;
+			cin  w;
+			wynik = m1  w;
+			cout    =nn  wynik  nWcisnij [enter] aby kontynuowacn;
+			cin.get();
+    		break;
+     	default
+			cout  Podano zla wartosc.;
+			break;
+    	}
+    
+	
