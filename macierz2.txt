@@ -1,0 +1,33 @@
+istream & operator>> (istream & klawiatura, macierz & m)
+{
+for(int petla = 0; petla < m.wiersze; petla++) delete (m.tablica)[petla];
+delete [] (m.tablica);
+m.tablica = new wektor * [1];
+(m.tablica)[0] = new wektor;
+m.wiersze = 1;
+
+for(int petla = 0; klawiatura.peek() != '\n'; petla++)
+	{
+	if(petla != 0)
+		{
+		m.tablica = powieksz(&(m.tablica), m.wiersze);
+		m.wiersze++;
+		}
+	klawiatura >> (*(m.tablica)[petla]);
+	if(((*(m.tablica)[petla])).podaj_rozmiar() != ((*(m.tablica)[0]).podaj_rozmiar()))
+		{
+		cout<<"Blad, niezgodne rozmiary wierszy" << endl;
+		m = macierz(2,2);
+		return klawiatura;
+		}
+	}
+m.kolumny = ((*(m.tablica)[0])).podaj_rozmiar();
+klawiatura.get();
+return klawiatura;
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////
+ostream & operator<< (ostream & ekran, macierz & m)
+{
+for (int petla = 0; petla < m.wiersze; petla++) ekran << *(m.tablica[petla]);
+return ekran;
+}
