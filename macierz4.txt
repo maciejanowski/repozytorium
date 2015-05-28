@@ -1,0 +1,24 @@
+macierz & macierz::operator+= (macierz & m)
+{
+(*this) = (*this) + m;
+return (*this);	
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////
+macierz macierz::operator- (macierz & m)
+{
+macierz wynik(kolumny, wiersze);
+
+if ((wiersze == m.wiersze) && (kolumny == m.kolumny))
+	{
+	for (int petla = 0; petla < wiersze; petla++) wynik[petla] = (*tablica)[petla] - m[petla];	
+	}
+else cout << "blad rozmiarow" << endl;
+return wynik;		
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////
+macierz & macierz::operator-= (macierz & m)
+{
+(*this) = (*this) - m;
+return (*this);	
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////
