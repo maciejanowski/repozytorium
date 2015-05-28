@@ -1,0 +1,44 @@
+#ifndef MACIERZ
+#define MACIERZ
+#include <iostream>
+#include "wektor.h"
+using namespace std;
+
+class macierz
+{
+	private:
+		int wiersze;
+		int kolumny;
+		wektor** tablica;
+	public:
+		macierz (int k = 2, int w = 2);
+		~macierz();
+		macierz (macierz & domyslny);
+		
+		friend istream & operator>> (istream & klawiatura , macierz & m);
+    	friend ostream & operator<< (ostream & ekran , macierz & m);
+    	
+		friend wektor operator* (wektor & w, macierz & m);
+    	friend wektor & operator*= (wektor & w, macierz & m);
+    	friend int operator* (macierz & m, wektor & w);
+    
+    	wektor & operator[] (int ktory);
+    	macierz & operator= (const macierz & m);
+    	macierz operator+ (macierz & m);
+    	macierz & operator+= (macierz & m);
+    	macierz operator- (macierz & m);
+    	macierz & operator-= (macierz & m);
+    	macierz operator* (macierz & m);
+    	macierz & operator*= (macierz & m);
+    	bool operator== (const macierz & m);
+    	bool operator!= (macierz & m);
+    	macierz operator* (int liczba);
+    	macierz & operator*= (int liczba);	
+};
+
+istream & operator>> (istream & klawiatura, macierz & m);
+ostream & operator<< (ostream & ekran, macierz & m);
+wektor operator* (wektor & w, macierz & m);
+wektor ** powieksz (wektor ***tab, int rozmiar);
+
+#endif
