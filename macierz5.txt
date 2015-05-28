@@ -1,0 +1,31 @@
+macierz macierz::operator* (macierz & m)
+{
+macierz wynik(m.kolumny, wiersze);
+if (kolumny == m.wiersze)
+	{
+	for(int petla = 0; petla < wiersze; petla++)
+      for(int petla2 = 0; petla2 < m.kolumny; petla2++)
+		for(int petla3 = 0; petla3 < kolumny; petla3++)
+	  		(wynik[petla])[petla2] = (wynik[petla])[petla2] + ((*tablica)[petla])[petla3]*(m[petla3])[petla2];	
+	}	
+else cout << "blad rozmiarow" << endl;
+return wynik;	
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////
+macierz & macierz::operator*= (macierz & m)
+{
+(*this) = (*this) * m;
+return (*this);	
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////
+bool macierz::operator== (const macierz & m)
+{
+int n = 0;
+if ((wiersze == m.wiersze) && (kolumny == m.kolumny))
+	{
+	for (int petla = 0; petla < wiersze; petla ++)
+		if ((tablica)[petla] == (m.tablica)[petla])	n++;
+	if (n == wiersze) return true;	
+	}
+return false;		
+}
