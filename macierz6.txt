@@ -1,0 +1,35 @@
+bool macierz::operator!= (macierz & m)
+{
+return !((*this) == m);
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////
+macierz macierz::operator* (int liczba)
+{
+macierz wynik;
+wynik = (*this);
+for (int petla = 0; petla < wiersze; petla++) wynik[petla] *= liczba;
+return wynik;	
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////
+macierz & macierz::operator*= (int liczba)
+{
+(*this) = (*this) * liczba;
+return (*this);	
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////
+wektor operator* (wektor & w, macierz & m)
+{
+wektor wynik(m.kolumny); 
+if (w.rozmiar == m.wiersze)
+	for(int petla = 0; petla < m.kolumny; petla++)
+		for(int petla2 = 0; petla2 < m.wiersze; petla2++)
+			wynik[petla] += w[petla2]*m[petla2][petla];
+else cout << "blad rozmiaru" << endl;
+return wynik;
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////
+wektor & operator*= (wektor & w, macierz & m)
+{
+w = w * m;
+return w;	
+}
