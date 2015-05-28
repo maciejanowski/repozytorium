@@ -1,0 +1,31 @@
+#include <iostream>
+#include <new>
+#include "wektor.h"
+#include "macierz.h"
+using namespace std;
+///////////////////////////////////////////////////////////////////////////////////////////////////
+macierz::macierz(int k, int w)
+{
+kolumny = k;
+wiersze = w;
+tablica = new wektor* [w];
+for (int petla = 0; petla < w; petla++) tablica[petla] = new wektor(k);	
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////
+macierz::~macierz()
+{
+for (int petla = 0; petla < wiersze; petla++) delete [] tablica[petla];
+delete [] tablica;	
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////
+macierz::macierz (macierz & domyslny)
+{
+wiersze = domyslny.wiersze;
+kolumny = domyslny.kolumny;
+tablica = new wektor* [wiersze];
+for (int petla = 0; petla < wiersze; petla++) 
+	{
+	tablica[petla] = new wektor(kolumny);
+	(tablica[petla]) = (domyslny.tablica)[petla];	
+	}	
+} 
