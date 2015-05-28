@@ -1,4 +1,4 @@
-#ifndef MACIERZ
+#ifndef MACIERZ //bardzo ³adnie
 #define MACIERZ // jaka macierz???
 #include <iostream>
 #include "wektor.h"
